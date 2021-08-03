@@ -3,6 +3,8 @@ import axios from "axios"
 
 import DisplayCharacter from "../components/DisplayCharacter"
 
+import "./Characters.css"
+
 const Characters = () => {
 	const [characters, setCharacters] = useState([])
 	useEffect(() => {
@@ -17,7 +19,7 @@ const Characters = () => {
 		recupData()
 	}, [])
 	return (
-		<div>
+		<div className="globalCharac">
 			{characters.map((character) => (
 				<DisplayCharacter key={character.id} {...character} />
 			))}
